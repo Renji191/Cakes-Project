@@ -1,0 +1,317 @@
+### all cake list api
+
+GET http://127.0.0.1:8000/cakes/
+#Authorization: Basic user user
+
+### creating a cake
+
+POST http://127.0.0.1:8000/cakes/
+# Authorization: Basic admin admin
+# Authorization: Token 909c103f07940283ca919aeefbd05d1a8237e379
+Authorization: : Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzk0MDYzMjA1LCJpYXQiOjE3OTM2MzEyMDUsImp0aSI6Ijg4MmNkNWUzYmQ1ODQwYjliYmZkM2E3MTE1MzE1MWQ3IiwidXNlcl9pZCI6IjEifQ.N-o0mhjiJfDMHYDK_UA4vT0q75oKjg0VOpjiXq_QOSM
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="name"
+
+Chocolate Cake
+--abc
+Content-Disposition: form-data; name="description"
+
+Rich chocolate cake with cream frosting
+--abc
+Content-Disposition: form-data; name="photo"; filename="image.jpg"
+Content-Type: image/jpeg
+
+< ./image.jpg
+--abc
+Content-Disposition: form-data; name="category"
+
+1
+--abc
+Content-Disposition: form-data; name="shape"
+
+1
+--abc
+Content-Disposition: form-data; name="weight"
+
+1
+--abc
+Content-Disposition: form-data; name="price"
+
+1250
+--abc--
+
+
+### cake retrieve api
+
+GET http://127.0.0.1:8000/cakes/1/
+
+
+### updating a cake
+
+PATCH  http://127.0.0.1:8000/cakes/1/
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="name"
+
+Chocolate Vancho Cake
+
+---abc--
+
+
+
+### cake delete api
+
+DELETE http://127.0.0.1:8000/cakes/1/
+
+
+
+
+
+
+
+### all category list api
+
+GET http://127.0.0.1:8000/category/
+#Authorization: Basic user user
+
+### creating a category
+
+POST http://127.0.0.1:8000/category/
+Authorization: Basic admin admin
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="name"
+
+Mango Cake
+
+
+# Chocolate Cake
+# --abc
+# Content-Disposition: form-data; name="description"
+
+# Rich chocolate cake with cream frosting
+# --abc
+# Content-Disposition: form-data; name="photo"; filename="image.jpg"
+# Content-Type: image/jpeg
+
+# < ./image.jpg
+--abc
+Content-Disposition: form-data; name="name"
+
+# Birthday Cakes
+# --abc
+# Content-Disposition: form-data; name="shape"
+
+# Round
+# --abc
+# Content-Disposition: form-data; name="weight"
+
+# 1 kg
+# --abc
+# Content-Disposition: form-data; name="price"
+
+# 1250
+--abc--
+
+
+### category retrieve api
+
+GET http://127.0.0.1:8000/category/1/
+
+
+### updating a category
+
+PATCH  http://127.0.0.1:8000/category/1/
+Authorization: Basic admin admin
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="category"
+
+---abc--
+
+
+
+### category delete api
+
+DELETE http://127.0.0.1:8000/category/1/
+
+
+###shape
+
+
+### all shape list api
+
+GET http://127.0.0.1:8000/shape/
+#Authorization: Basic user user
+
+### creating a category
+
+POST http://127.0.0.1:8000/shape/
+Authorization: Basic admin admin
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="name"
+
+Square
+
+
+# Chocolate Cake
+# --abc
+# Content-Disposition: form-data; name="description"
+
+# Rich chocolate cake with cream frosting
+# --abc
+# Content-Disposition: form-data; name="photo"; filename="image.jpg"
+# Content-Type: image/jpeg
+
+# < ./image.jpg
+--abc
+Content-Disposition: form-data; name="name"
+
+# Birthday Cakes
+# --abc
+# Content-Disposition: form-data; name="shape"
+
+# Round
+# --abc
+# Content-Disposition: form-data; name="weight"
+
+# 1 kg
+# --abc
+# Content-Disposition: form-data; name="price"
+
+# 1250
+--abc--
+
+
+### category retrieve api
+
+GET http://127.0.0.1:8000/shape/1/
+
+
+### updating a category
+
+PATCH  http://127.0.0.1:8000/shape/1/
+Authorization: Basic admin admin
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="name"
+
+---abc--
+
+
+
+### shape delete api
+
+DELETE http://127.0.0.1:8000/shape/1/
+
+
+###weight
+
+
+### all weight list api
+
+GET http://127.0.0.1:8000/weight/
+#Authorization: Basic user user
+
+### creating a weight
+
+POST http://127.0.0.1:8000/weight/
+Authorization: Basic admin admin
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="name"
+
+2kg
+
+
+# Chocolate Cake
+# --abc
+# Content-Disposition: form-data; name="description"
+
+# Rich chocolate cake with cream frosting
+# --abc
+# Content-Disposition: form-data; name="photo"; filename="image.jpg"
+# Content-Type: image/jpeg
+
+# < ./image.jpg
+--abc
+Content-Disposition: form-data; name="name"
+
+# Birthday Cakes
+# --abc
+# Content-Disposition: form-data; name="shape"
+
+# Round
+# --abc
+# Content-Disposition: form-data; name="weight"
+
+# 1 kg
+# --abc
+# Content-Disposition: form-data; name="price"
+
+# 1250
+--abc--
+
+
+### category retrieve api
+
+GET http://127.0.0.1:8000/weight/1/
+
+
+### updating a weight
+
+PATCH  http://127.0.0.1:8000/weight/1/
+Authorization: Basic admin admin
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="name"
+
+3 kg
+
+---abc--
+
+
+
+### weight delete api
+
+DELETE http://127.0.0.1:8000/weight/1/
+
+
+### login api
+
+POST http://127.0.0.1:8000/login/
+Content-Type: application/json
+
+{
+  "username":"admin",
+
+  "password":"admin"
+}
+
+
+### register api
+
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+  "username":"keerthika123@mailinator.com",
+
+  "first_name": "Keerthika",
+
+  "role": "User",
+
+  "password":"Keerthika123"
+}
+
+
